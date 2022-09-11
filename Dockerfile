@@ -6,7 +6,7 @@ RUN apt-get update
 RUN apt-get -y upgrade
 
 # Install Apache2 / PHP 5.6 & Co.
-RUN apt-get -y install apache2 php5 libapache2-mod-php5 php5-dev php-pear php5-curl curl libaio1
+RUN apt-get -y install apache2 php5 libapache2-mod-php5 php5-dev php-pear php5-curl curl libaio1 nano
 
 # Install the Oracle Instant Client
 ADD oracle/oracle-instantclient12.1-basic_12.1.0.2.0-2_amd64.deb /tmp
