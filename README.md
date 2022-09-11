@@ -27,5 +27,20 @@ Start a new container with your application and bind the port 80 of the containe
 
     docker run -p 8080:80 -d -v </local/path/www>:/var/www/html thomasbisignani/docker-apache-php-oracle
 
+## Use command to access the container
+
+docker exec -it <container-name>
+
+
+## Add this configuration in apache2.conf
+
+<Directory /var/www/>
+    Options Indexes FollowSymLinks MultiViews
+    AddType application/x-httpd-php .php
+    AllowOverride All
+    Require all granted
+</Directory>
+
+
 ## Test your deployment :
 * Open [http://127.0.0.1:8080](http://127.0.0.1:8080) in your browser
